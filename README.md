@@ -1,5 +1,6 @@
 <div align="center">
   <h2>ft_irc – 42 project IRC Server</h2>
+  <img src="./img/ft_irc.png"/>
   <br>
 </div>
 
@@ -29,7 +30,7 @@
 The goal of this project is to implement a **multi-client IRC server** from scratch.  
 It focuses on:
 
-- TCP/IP networking
+- TCP/IP networking (IPV4)
 - Poll-based multiplexing
 - Client authentication
 - Channel and user management
@@ -64,31 +65,39 @@ make
 ---
 
 ## 🖥 Usage
-Run the server:
+### Run the server:
 ```bash
 ./ircserv <port> <password>
 ```
 
-Connect using an IRC client:
+### Connect using an IRC client:
 ```bash
 nc localhost <port>
+PASS mypassword
+NICK mynickname
+USER myuser 0 * :Real Name
 ```
+
+This version was built using also LimeChat (MacOs).
 
 ---
 
 ## ⌨️ Supported Commands
-- PASS
-- NICK
-- USER
-- JOIN
-- PART
-- PRIVMSG
-- NOTICE
-- KICK
+- CAP (minimalist)
 - INVITE
-- TOPIC
+- JOIN
+- KICK
 - MODE
+- NICK
+- NOTICE
+- PART
+- PASS
+- PRIVMSG
+- PING
+- PONG
 - QUIT
+- TOPIC
+- USER
 
 ---
 
@@ -96,18 +105,24 @@ nc localhost <port>
 ```
 .
 ├── inc/
-│   ├── Server.hpp
-│   ├── User.hpp
-│   ├── Channel.hpp
-│   └── Commands.hpp
+│    ├── Channel.hpp
+│    ├── Commands.hpp
+│    ├── Parser.hpp
+│    ├── Server.hpp
+│    └──User.hpp
 ├── src/
-│   ├── Server.cpp
-│   ├── User.cpp
-│   ├── Channel.cpp
-│   ├── Commands.cpp
-│   └── main.cpp
+│    ├── Channel.cpp
+│    ├── Commands.cpp
+│    ├── main.cpp
+│    ├── Parser.cpp
+│    ├── Server.cpp
+│    └── User.cpp
+├── en.subject.pdf
+├── LICENSE
 ├── Makefile
-└── README.md
+├── README.md
+└── README42.md
+
 ```
 
 ---
@@ -121,6 +136,9 @@ This project represents the final validated version for the 42 curriculum.
 Project developed by:
 - **Loïc Gérard** – 📧 lgerard@student.42perpignan.fr  
   [École 42 Perpignan](https://42perpignan.fr)
+(https://42perpignan.fr).
+- **WolfyNours**  - (https://github.com/WolfyNours).
+- **notoverflow** - (https://github.com/notoverflow).
 
 ---
 
@@ -128,4 +146,5 @@ Project developed by:
 This project is released under the MIT License.
 
 > ⚠️ **Note for students**  
-> Writing your own IRC server is the only way to truly understand networking.
+> If you are a student at 42 (or elsewhere), it is strongly recommended **not to copy/paste** this code.  
+> Instead, try to **write your own solution** — it’s the only way to really learn and succeed.
