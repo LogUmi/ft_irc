@@ -1,0 +1,46 @@
+# Binaries
+*.o
+*.a
+*.d
+*.so
+*.dylib
+*.exe
+*.out
+
+# Executables
+a.out
+main
+test
+ircserv
+*.exe
+
+# Build directories
+obj/
+build/
+bin/
+
+# Libft / other 42 libs
+libft.a
+*.gch
+
+# Logs and temp files
+*.log
+*.swp
+*.swo
+*.tmp
+*.bak
+*.dSYM/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# IDE / Editor config
+.vscode/
+.idea/
+*.code-workspace
+
+# Python virtual envs (si tu mixes des scripts)
+venv/
+__pycache__/
+*.pyc
