@@ -20,6 +20,7 @@
 - [Usage](#-usage)
 - [Supported Commands](#-supported-commands)
 - [Project Structure](#-project-structure)
+- [Examples](#-examples)
 - [Roadmap](#-roadmap)
 - [Credits](#-credits)
 - [License](#-license)
@@ -125,6 +126,17 @@ This version was built using also LimeChat (MacOs).
 
 ```
 
+---
+
+## 🔎 Examples
+
+Four clients (1 LimeChat / 3 Netcat):
+
+<img src="./img/clients.png"/><br><br>
+
+Server log:
+
+<img src="./img/server.png"/><br><br>
 ---
 
 ## 🚀 Roadmap
